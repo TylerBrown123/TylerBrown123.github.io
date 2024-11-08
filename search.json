@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is Tyler Brown’s sports blog. He is very interested in the NFL."
+  },
+  {
+    "objectID": "posts/2008-Lions-vs-2017-Browns/index.html",
+    "href": "posts/2008-Lions-vs-2017-Browns/index.html",
+    "title": "2008 Lions vs 2017 Browns",
+    "section": "",
+    "text": "The 0-16 Lions in 2008 were atrocious, but so were the 0-16 Browns in 2017.\n\n\nCode\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "TylerSportsBlog",
+    "section": "",
+    "text": "2008 Lions vs 2017 Browns\n\n\n\n\n\n\nNFL\n\n\n\n\n\n\n\n\n\nNov 5, 2024\n\n\nTyler Brown\n\n\n\n\n\n\nNo matching items"
+  }
+]
