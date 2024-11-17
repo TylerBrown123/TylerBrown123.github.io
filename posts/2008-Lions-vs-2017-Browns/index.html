@@ -357,7 +357,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>,</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>                              <span class="at">face =</span> <span class="st">"bold"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>                              <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -367,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>The 2008 Lions gained less rushing, passing, and total yardage than the 2017 Browns, by a decent margin too, 629 yards to be exact. Being around two full games worth of yardage behind another one of history’s worst teams is not a good look for sure.</p>
+<p>The 2008 Lions gained less rushing, passing, and total yardage than the 2017 Browns, by a decent margin too. 629 yards to be exact. Being around two full games worth of yardage behind another one of history’s worst teams is not a good look for sure.</p>
 <p>But hey, that’s just offense. Let’s look at a more balanced between offense and defense stat, turnover differential. Who was the worst at both creating turnovers and holding onto the ball?</p>
 <div class="cell">
 <details class="code-fold">
@@ -493,23 +494,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(</span>
 <span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">20</span>,</span>
 <span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>      <span class="at">face =</span> <span class="st">"bold"</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>BrownsLineChart <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(ChartReadyBrownsData_Long, <span class="fu">aes</span>(<span class="at">x =</span> Week, <span class="at">y =</span> Points, <span class="at">color =</span> Category)) <span class="sc">+</span> </span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Browns_Points_Scored"</span> <span class="ot">=</span> <span class="st">"#FF3C00"</span>, </span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Browns_Points_Allowed"</span> <span class="ot">=</span> <span class="st">"#311D00"</span>),</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Points Allowed"</span>, <span class="st">"Points Scored"</span>)) <span class="sc">+</span></span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"By: Tyler Brown | Source: nflscraPy"</span>, </span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Week"</span>, </span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Points"</span>, </span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">""</span>)</span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>LionsLineChart <span class="sc">/</span> BrownsLineChart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">11</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>BrownsLineChart <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(ChartReadyBrownsData_Long, <span class="fu">aes</span>(<span class="at">x =</span> Week, <span class="at">y =</span> Points, <span class="at">color =</span> Category)) <span class="sc">+</span> </span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Browns_Points_Scored"</span> <span class="ot">=</span> <span class="st">"#FF3C00"</span>, </span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Browns_Points_Allowed"</span> <span class="ot">=</span> <span class="st">"#311D00"</span>),</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Points Allowed"</span>, <span class="st">"Points Scored"</span>)) <span class="sc">+</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"By: Tyler Brown | Source: nflscraPy"</span>, </span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Week"</span>, </span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Points"</span>, </span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">""</span>)</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>LionsLineChart <span class="sc">/</span> BrownsLineChart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
