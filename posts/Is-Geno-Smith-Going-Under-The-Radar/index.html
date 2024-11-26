@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tyler Brown">
-<meta name="dcterms.date" content="2024-11-25">
+<meta name="dcterms.date" content="2024-11-26">
 
-<title>Is Geno Smith going under the radar this season? – Tyler’s Collection of Sports Stories</title>
+<title>Does Geno Smith deserve more or less praise for what he has done this season? – Tyler’s Collection of Sports Stories</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Is Geno Smith going under the radar this season?</h1>
+      <h1 class="title">Does Geno Smith deserve more or less praise for what he has done this season?</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">NFL</div>
               </div>
@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 25, 2024</p>
+        <p class="date">November 26, 2024</p>
       </div>
     </div>
     
@@ -188,7 +188,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Geno Smith may be going under the radar this season.</p>
+<p>The comeback of Geno Smith has been an interesting story in the NFL the last couple of years. Geno claims he “ain’t write back though” to all the haters that had already written him off from the start of 2023. His 2023 season was a great sight to see if you’re a Seahawks fan like myself. However this begs the question, is Geno continuing this success into 2024? More specifically, does he deserve more or less praise for how he is performing this season?</p>
+<p>To try and answer this question, let’s look at some 2024 passing data.</p>
+<p>First, let’s look at simply passing yards. Who is getting the most passing yards through Week 12 of the 2024 season?</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -211,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>NFL2024Passing <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(NFL2024Passing1, NFL2024Passing2)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Top20NFL2024Passing <span class="ot">&lt;-</span> NFL2024Passing <span class="sc">|&gt;</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Pass Yds</span><span class="st">`</span> <span class="sc">&gt;=</span> <span class="dv">2186</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">20</span>, <span class="st">`</span><span class="at">Pass Yds</span><span class="st">`</span>)</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Geno <span class="ot">&lt;-</span> NFL2024Passing <span class="sc">|&gt;</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Player <span class="sc">==</span> <span class="st">"Geno Smith"</span>)</span>
@@ -249,6 +251,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>Wow! Geno is above tons of big names like Patrick Mahomes, Joe Burrow, and Josh Allen. He sits only 18 yards behind one of the MVP front runners in Lamar Jackson.</p>
+<p>However, there is something else that might be playing a role here. Seattle has one of the most pass first offenses in the league. That may contribute to why Geno gets so many yards. Because of that, let’s look at something maybe more indicative of QB ability regardless of the type of offense, touchdown vs interception ratio. We’ll compare Geno to the two MVP front runners, Lamar Jackson and Josh Allen</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -296,6 +300,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>Ouch. Not looking good for Geno here. He has an even touchdown to interception ratio. That is not very good. Lamar Jackson and Josh Allen have him beat here by a lot.</p>
+<p>Let’s look at one more thing. How effective is Geno at getting the ball far downfield, but also connecting with his receivers when doing so?</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -357,6 +363,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>Hey, what do you know. He’s pretty good in this category, up in that first quadrant of guys who are able to throw it long and connect with receivers at a high rate. He’s got a better completion percentage than both Jackson and Allen here.</p>
+<p>So what’s the conclusion? It seems that Geno is a pretty good NFL QB. He gets lots of passing yards (even for being in a heavy pass first offense), and has the high completion percentage while throwing it deep to boot. However, he seems to struggle with giving the ball to the other team too much, and with making it to the end zone. It’ll be interesting to see if he can clean up the turnovers and throw some more touchdowns. If he can, he might just earn a spot among the NFL’s top-tier quarterbacks.</p>
 
 
 
